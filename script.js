@@ -1,3 +1,4 @@
+//to set the current date and time
 const timeDisplay = document.querySelector("#current-time");
 const dateDisplay = document.querySelector("#current-date");
 // to get the user input for set alarm
