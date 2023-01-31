@@ -1,0 +1,119 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 2em;
+  font-family: Ubuntu;
+  border-radius: 25px;
+  color: white;
+  line-height: 25px;
+  box-shadow: 5px 5px 10px #ccc;
+  margin: 20px;
+}
+
+.card.purple {
+  background: linear-gradient(150deg, #f731db, #4600f1 100%);
+  align-self: flex-start;
+}
+
+.card.green {
+  background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+  align-self: flex-end;
+}
+
+#quoteHeader {
+  text-align: center;
+}
+#quoteAuthor {
+  text-align: right;
+}
+#current-time,
+#current-date {
+  font-size: 40px;
+}
+.label-heading {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px #ccc;
+  margin: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.input-field {
+  width: 120px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0px 0px 10px #ddd;
+  transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+}
+.input-field:focus {
+  border-color: #3498db;
+  box-shadow: inset 0px 0px 10px #3498db;
+  outline: none;
+}
+.gradient-button {
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(135deg, #02aab0, #00cdac);
+}
+
+.gradient-button:active {
+  transform: translateY(2px);
+}
+
+.alarm-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.time {
+  color: #00cdac;
+  font-size: 32px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+.delete-alarm {
+  background: linear-gradient(135deg, #dd1b1b, #dccb0d);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-alarm:focus,
+.delete-alarm:hover {
+  background: linear-gradient(135deg, #dccb0d, #dd1b1b);
+}

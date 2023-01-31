@@ -12,10 +12,128 @@
       type="image/x-icon"
       href="static/alarm-clock.png"
     />
+    <!-- Added link for all bootstrap link for style -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Linking css file for styling page-->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Added Navbar using bootstrap -->
+    <nav
+      class="navbar navbar-expand-lg"
+      style="
+        background-image: linear-gradient(to right, #434343 0%, black 100%);
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: white">
+          <img
+            src="static/alarm-clock.png"
+            alt="Logo"
+            width="24"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Alarm Clock
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span style="color: white" class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              style="color: white"
+              >Home</a
+            >
+            <a class="nav-link" href="#set-alarm" style="color: white"
+              >Set Alarm</a
+            >
+            <a class="nav-link" href="#alarm-list" style="color: white"
+              >Alarm List</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Added card view using linear-gradient for quote -->
+    <div class="card green">
+      <h1 id="quoteHeader">Thought of the day</h1>
+      <p id="quoteText"></p>
+      <p id="quoteAuthor"></p>
+    </div>
+
+    <!-- Added card view using linear-gradient to show current-date and time -->
+    <div class="card purple">
+      <h1 id="current-date"></h1>
+      <h1>Never Settle</h1>
+      <h1 id="current-time"></h1>
+    </div>
+
+    <!-- taking the input time from the user -->
+    <div id="set-alarm" style="margin-top: 100px">
+      <h1 class="label-heading">Set Alarm Time</h1>
+      <div class="input-container">
+        <input
+          type="number"
+          name="hours"
+          placeholder="Hours"
+          min="0"
+          max="12"
+          required
+          id="hours"
+          class="input-field"
+        />
+        <input
+          type="number"
+          name="minutes"
+          min="0"
+          max="60"
+          placeholder="Minutes"
+          required
+          id="minutes"
+          class="input-field"
+        />
+        <input
+          type="number"
+          name="seconds"
+          min="0"
+          max="60"
+          placeholder="Seconds"
+          required
+          id="seconds"
+          class="input-field"
+        />
+        <select required name="am-pm" id="am-pm" class="input-field">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <button class="gradient-button" id="submitButton" type="submit">
+          Set Alarm
+        </button>
+      </div>
+    </div>
+    <!-- here we will display the list of alarm set -->
+    <div id="alarm-list" style="margin-top: 100px; margin-bottom: 50px">
+      <h1 class="label-heading">Your Alarm</h1>
+      <div class="alarms-container" id="alarms-container"></div>
+    </div>
+    <!-- Added link for all bootstrap link for JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Linking JavaScript File  -->
     <script src="script.js"></script>
   </body>
