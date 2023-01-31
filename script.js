@@ -95,7 +95,7 @@ function convertToTime(hour, minute, second, amPm) {
 //check the current time with alarm time also store into local
 function setAlarm(time, fetching = false) {
   const alarm = setInterval(() => {
-    if (time == getCurrentDateTime()) {
+    if (time === getCurrentDateTime()) {
       alert("Alarm Ringing");
     }
   }, 500);
